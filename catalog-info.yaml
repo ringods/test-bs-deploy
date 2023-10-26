@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: test-deploy
+  description: "Test from Backstage"
+  annotations:
+    github.com/project-slug: ringods/test-bs-deploy
+    pulumi.com/project-slug: demo/test-deploy/dev
+spec:
+  type: service
+  lifecycle: experimental
+  owner: "group:default/guests"
+  system: system:default/examples
+  dependsOn:
+    - resource:default/test-deploy
